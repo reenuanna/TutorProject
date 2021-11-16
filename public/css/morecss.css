@@ -1,0 +1,8 @@
+.cours_timging_img
+{
+	background-image: url("images/cours_bg.jpg");
+    min-height: 780px;
+    width: 100%;
+    /*margin-top: 50px;*/
+    background-color: red;
+}
