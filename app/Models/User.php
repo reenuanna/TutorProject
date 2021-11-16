@@ -45,9 +45,9 @@ class User extends Authenticatable
     {
         DB::table($table)->insert($data);
     }
-    public function loginfun($table,$email,$pass)
-    {
-        return DB::table($table)->where('email',$email)->where('password',$pass)->first();
+    // public function loginfun($table,$email,$pass)
+    // {
+    //     return DB::table($table)->where('email',$email)->where('password',$pass)->first();
         
-    }
+    // }
 }

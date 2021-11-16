@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\tutorModel;
+use Session;
 
 class UserController extends Controller
 {
@@ -26,10 +27,11 @@ class UserController extends Controller
     {
         $email=$request->input('email');
         $pass=$request->input('pass');
-        $data=$this->obj->loginfun('users',$email,$pass);
+        $data=User::where('email',$email)->where('password',$pass)->first();
         if(isset($data))
         {
-            $request->session()->put(array('userid',$data->id));
+            // $request->session()->put(array('userid',$data->id));
+            Session::put('sessid',$data->id);
             return redirect('/home');
         }
         else{
@@ -51,12 +53,13 @@ class UserController extends Controller
         $data['email']=$req->input('email');
         $data['password']=$req->input('pass');
         $this->obj->insertData('users',$data);
-        $email=$request->input('email');
-        $pass=$request->input('pass');
-        $data=$this->obj->loginfun('users',$email,$pass);
+        $email=$req->input('email');
+        $pass=$req->input('pass');
+        $data=User::where('email',$email)->where('password',$pass)->first();
         if(isset($data))
         {
-            $request->session()->put(array('userid',$data->id));
+            // $request->session()->put(array('userid',$data->id));
+            Session::put('sessid',$data->id);
             return redirect('/home');
         }
     }
