@@ -31,7 +31,7 @@
               <br>
               <div>
              <span style="width:48%; text-align:left;  display: inline-block;"><p  style="color:white">New Member ?</p></span>
-              <span style="width:50%; text-align:right;  display: inline-block;"><a href="/register" class="btn btn-dark" style="color:white">Sign Up</a></span>
+              <span style="width:50%; text-align:right;  display: inline-block;"><a href="/tutorsignup" class="btn btn-dark" style="color:white">Sign Up</a></span>
               </div>
           </fieldset>
          

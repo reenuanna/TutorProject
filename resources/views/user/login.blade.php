@@ -44,7 +44,7 @@
 
       </div> <!-- end login -->
       <div class="logo">
-        <img src="/images/logo.jpg" alt="">
+       <a href="/"> <img src="/images/logo.jpg" alt=""></a>
         <br>to Reach the Unreachable
           
           <div class="clearfix"></div>

@@ -38,6 +38,11 @@ class UserController extends Controller
             return redirect('/login')->with('msg','Invalid Email ID or Password');
         }
     }
+    public function logout(Request $request)
+    {
+        $request->session()->forget('sessid');
+        return redirect('/login');
+    }
     public function register()
     {
         return view('user.register');

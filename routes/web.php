@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\TutorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,7 @@ use App\Http\Controllers\AdminController;
 Route::get('/',[UserController::class,'index']);
 Route::get('login',[UserController::class,'login']);
 Route::post('/loginfun',[UserController::class,'loginfun']);
+Route::get('logout',[UserController::class,'logout']);
 Route::get('register',[UserController::class,'register']);
 Route::post('insertData',[UserController::class,'regFun']);
 Route::get('home',[UserController::class,'home']);
@@ -36,4 +38,7 @@ Route::post('insertSubject',[AdminController::class,'insertSubject']);
 
 // -------------------TUTOR-----------------------------
 Route::get('tutorlog',[TutorController::class,'tutorlog']);
+Route::post('logintut',[TutorController::class,'logintut']);
+Route::get('tutorsignup',[TutorController::class,'tutorsignup']);
+Route::post('saveTutor',[TutorController::class,'saveTutor']);
 

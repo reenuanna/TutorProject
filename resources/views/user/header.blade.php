@@ -56,7 +56,31 @@
                            <span class="float-right"><i class="fa fa-bars"></i> <i class="fa fa-close"></i></span>
                            </button>
                            <div class="collapse navbar-collapse justify-content-md-center" id="cloapediamenu">
+                            @if(session()->has('sessid'))
+                             
                               <ul class="navbar-nav">
+                                 <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link color-aqua-hover" href="about.html">About</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link color-aqua-hover" href="coaching.html">Coaching</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link color-grey-hover" href="time.html">Time</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link color-grey-hover" href="contact.html">Contact Us</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link color-grey-hover" href="/logout">Logout</a>
+                                 </li>
+                              </ul>
+                              @else
+                              <!-- before login -->
+                               <ul class="navbar-nav">
                                  <li class="nav-item active">
                                     <a class="nav-link" href="index.html">Home</a>
                                  </li>
@@ -76,6 +100,8 @@
                                     <a class="nav-link color-grey-hover" href="/login">Login</a>
                                  </li>
                               </ul>
+                              @endif
+                              <!-- -------------------------- -->
                               <ul class="navbar-nav">
                                  <li class="nav-item">
                                     <a class="nav-link" href="#"><img src="images/search_icon.png" alt="#" /></a>
