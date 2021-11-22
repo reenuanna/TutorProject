@@ -63,7 +63,7 @@
                                     <a class="nav-link" href="index.html">Home</a>
                                  </li>
                                  <li class="nav-item">
-                                    <a class="nav-link color-aqua-hover" href="about.html">About</a>
+                                    <a class="nav-link color-aqua-hover" href="/about">About</a>
                                  </li>
                                  <li class="nav-item">
                                     <a class="nav-link color-aqua-hover" href="coaching.html">Coaching</a>
@@ -85,7 +85,7 @@
                                     <a class="nav-link" href="index.html">Home</a>
                                  </li>
                                  <li class="nav-item">
-                                    <a class="nav-link color-aqua-hover" href="about.html">About</a>
+                                    <a class="nav-link color-aqua-hover" href="/about">About</a>
                                  </li>
                                  <li class="nav-item">
                                     <a class="nav-link color-aqua-hover" href="coaching.html">Coaching</a>

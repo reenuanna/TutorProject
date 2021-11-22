@@ -23,6 +23,7 @@ Route::get('logout',[UserController::class,'logout']);
 Route::get('register',[UserController::class,'register']);
 Route::post('insertData',[UserController::class,'regFun']);
 Route::get('home',[UserController::class,'home']);
+Route::get('about',[UserController::class,'about']);
 Route::get('clsSubj/{id}',[UserController::class,'clsSubj']);
 Route::post('selectClassSub',[UserController::class,'selectClassSub']);
 

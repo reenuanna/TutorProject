@@ -19,6 +19,10 @@ class UserController extends Controller
     {
         return view('user.index');
     }
+    public function about()
+    {
+        return view('user.about');
+    }
     public function login()
     {
         return view('user.login');
