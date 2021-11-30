@@ -1,0 +1,39 @@
+.msg-box {
+ 
+  border-radius
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+  background-image: url('/images/msg.jpg');
+  background-size:100% 100%;
+   /*border:1px solid black;*/
+   height: 160px;
+}
+.msg-box1 {
+ 
+  border-radius
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+  background-image: url('/images/video.jpg');
+  background-size:100% 100%;
+   /*border:1px solid black;*/
+   height: 160px;
+
+}
+.msg-box2 {
+ 
+  border-radius
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+  background-image: url('/images/note.png');
+  background-size:100% 100%;
+   /*border:1px solid black;*/
+   height: 160px;
+
+}
+

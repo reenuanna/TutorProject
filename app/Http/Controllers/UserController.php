@@ -90,11 +90,12 @@ class UserController extends Controller
     }
         public function selectClassSub(Request $req)
         {
-         $cls=$req->input('cls');
+         // $cls=$req->input('cls');
          $sub=$req->input('sub');
-        //  $data['result']=$this->viewTotur('tutor',$cls,$sub);
-        //  return view('viewTutor',$data);  
-        return view('user.viewTutor'); 
+
+         $data['result']=tutorModel::where('subjects',$sub)->get();
+        
+        return view('user.viewTutor',$data); 
         }
     
 }

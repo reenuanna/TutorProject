@@ -14,13 +14,14 @@ class TutorController extends Controller
     }
     public function logintut(Request $req)
     {
-    	$email=$request->input('email');
-        $pass=$request->input('pass');
+    	$email=$req->input('email');
+        $pass=$req->input('pass');
         $data=tutorModel::where('email',$email)->where('password',$pass)->first();
         if(isset($data))
         {
             // $request->session()->put(array('userid',$data->id));
-            Session::put('sessid',$data->id);
+            Session::put('tutorid',$data->id);
+             
             return redirect('/tutor');
         }
         else{
@@ -53,10 +54,18 @@ class TutorController extends Controller
         {
             // $request->session()->put(array('userid',$data->id));
             Session::put('tutorid',$data->id);
+           
             return redirect('/tutor');
         }
         else{
             return redirect('/tutorlog')->with('msg','Invalid Email ID or Password');
         }
+    }
+    public function tutorHome()
+    {
+        $id=session('tutorid');
+;
+        $data['result']=tutorModel::where('id',$id);
+        return view('Tutor.home',$data);
     }
 }

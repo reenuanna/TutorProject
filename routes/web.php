@@ -42,4 +42,5 @@ Route::get('tutorlog',[TutorController::class,'tutorlog']);
 Route::post('logintut',[TutorController::class,'logintut']);
 Route::get('tutorsignup',[TutorController::class,'tutorsignup']);
 Route::post('saveTutor',[TutorController::class,'saveTutor']);
+Route::get('tutor',[TutorController::class,'tutorHome']);
 
