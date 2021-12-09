@@ -13,7 +13,7 @@ class tutorModel extends Model
     {
         DB::table($table)->insert($data);
     }
-    public function selectData($table)
+    public static function selectData($table)
     {
        return  DB::table($table)->get();
     }

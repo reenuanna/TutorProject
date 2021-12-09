@@ -30,7 +30,9 @@ class TutorController extends Controller
     }
     public function tutorsignup()
     {
-    	return view('Tutor.register'); 
+         $data['sub']=tutorModel::selectData('subjects');  
+         $data['cls']=tutorModel::selectData('classes');              
+    	return view('Tutor.register',$data); 
     }
     public function saveTutor(Request $req)
     {
@@ -44,7 +46,12 @@ class TutorController extends Controller
         $data->gender=$req->input('gender');
         $data->mobile=$req->input('mobile');
         $data->quali=$req->input('quali');
-        $data->subjects=$req->input('sub');
+        // $sub=$req->input('subject');
+        // $cls=$req->input('classs');
+        // echo $sub;
+        // exit();
+        $data->subjects=$req->input('subject');
+         $data->classes=$req->input('classs');
         $data->email=$email;
         $data->password=$pass;
         $data->save();

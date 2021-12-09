@@ -28,26 +28,12 @@
                                  <!-- <input type="text" class="form-control form-control-lg"> -->
                                  <select name="sub" id="subject"class="form-control form-control-lg">
                                  <option value="default" selected="selected" disabled="disabled">Select Your Subject</option>
+                                 @foreach($sub as $subj)
+                                <option value="{{$subj->sub_id}}">{{$subj->sub_name}} </option>
+                              @endforeach
                               </select>
                               </div>
-                              <script>
-                                 $(document).ready(function()
-                                 {
-                                    $('#cls').change(function(){
-                                      var id=$('#cls').val();
-                                    //   alert(id)
-                                      $.ajax({
-                                       type:'get',
-                                       url:'/clsSubj/'+id,
-                                       success:function(result)
-				                           {
-                                       //alert(result);
-                                          $('#subject').html(result);
-                                       }
-                                      });
-                                    });
-                                 });
-                              </script>
+                             
                               <div class="col-sm-4">
                                
                                  <input type="submit" class="btn btn-primary btn-block btn-lg">

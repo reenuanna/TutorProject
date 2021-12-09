@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -75,6 +74,7 @@ class UserController extends Controller
     public function home()
     {
         $data['result']=$this->tot->selectData('classes');
+        $data['sub']=$this->tot->selectData('subjects');
         return view('user.home',$data);
     }
     public function clsSubj($id)
