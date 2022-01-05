@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
->
+
 
 
 
@@ -129,7 +129,7 @@
                                             <label>Confirm Password</label>
                                             <input type="password" class="form-control"  value="" />
                                         </div>
-                                        <input type="submit" class="btnRegister"  value="Register"/>
+                                        <input type="submit" id="btn"class="btnRegister"  value="Register"/>
                                     </div>
                                 </div>
                             </div>
@@ -139,6 +139,22 @@
                 </div>
 
             </div>
+            <script>
+
+                $(document).ready(function()
+                {
+                    $('#btn').click(function(){
+                        $.ajax({
+                            type:'post',
+                            url:'saveTutor',
+                            data:{
+                                name:$('#name').val(),
+                                address:$('#address').val()
+                            }
+                        });
+                    });
+                });
+            </script>
 </body>
 </html>
 

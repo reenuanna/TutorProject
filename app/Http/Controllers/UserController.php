@@ -90,12 +90,39 @@ class UserController extends Controller
     }
         public function selectClassSub(Request $req)
         {
-         // $cls=$req->input('cls');
+         $cls=$req->input('cls');
          $sub=$req->input('sub');
-
-         $data['result']=tutorModel::where('subjects',$sub)->get();
-        
+            // echo $cls;
+            // exit();
+         $data['result']=tutorModel::selectTutor('tutor_models','subjects','classes',$sub,$cls);
+        // print_r($data);
+        // exit();
         return view('user.viewTutor',$data); 
         }
+        public function userlogin()
+        {
+            return view('user.userlogin');
+        }
+        public function loginaction(Request $req)
+        {
+            $email=$req->input('email');
+            $pass=$req->input('pass');
+            $data=User::where('email',$email)->where('password',$pass)->first();
+            if(isset($data))
+            {
+                Session::put('s_id',$data->id);
+               return redirect('/userprofile');
+            }
+            else{
+                return redirect('/userlogin')->with('error','Invalid Email or Password');
+            }
+        }
+            public function userprofile()
+            {
+                $id=session('s_id');
+                $data=User::find($id);
+                return view('userprofile'.$data);
+            }
+        }
     
-}
+

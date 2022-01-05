@@ -25,4 +25,8 @@ class tutorModel extends Model
     {
         return DB::table($table)->where('cls_id',$id)->get();
     }
+    public static function selectTutor($table1,$table2,$table3,$sub,$cls)
+    {
+        return DB::select("SELECT * from $table1 join $table2 on $table1.subjects=$table2.sub_id join $table3 on $table3.cls_id=$table1.classes where  $table1.subjects LIKE '%$sub%'  AND  $table1.classes LIKE '%$cls%'");
+    }
 }

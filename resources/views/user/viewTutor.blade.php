@@ -16,12 +16,13 @@
                       	@foreach($result as $val)
                         <div class="col-md-4 text_align_center">
                  <div class="cours">
-                   <img class="img-responsive" src="/images/cour3.png" alt="#" />
+                   
+                   <img src="{{asset('/images/cour3.png')}}" alt="#"  height="90"/>
                  </div>
                  <h3>{{$val->name}}</h3>
                  <p>Mobile : {{$val->mobile}}<br>
                  	Qualification : {{$val->quali}}<br>
-                 	Subject : {{$val->subjects}}</p>
+                 	Subject : {{$val->sub_name}}</p>
               </div> 
                         @endforeach
                       </div>

@@ -26,6 +26,9 @@ Route::get('home',[UserController::class,'home']);
 Route::get('about',[UserController::class,'about']);
 Route::get('clsSubj/{id}',[UserController::class,'clsSubj']);
 Route::post('selectClassSub',[UserController::class,'selectClassSub']);
+Route::get('userlogin',[UserController::class,'userlogin']);
+Route::post('loginaction',[UserController::class,'loginaction']);
+Route::get('userprofile',[UserController::class,'userprofile']);
 
 
 // ------------------ADMIN-------------------------
@@ -43,4 +46,5 @@ Route::post('logintut',[TutorController::class,'logintut']);
 Route::get('tutorsignup',[TutorController::class,'tutorsignup']);
 Route::post('saveTutor',[TutorController::class,'saveTutor']);
 Route::get('tutor',[TutorController::class,'tutorHome']);
+Route::get('videoup',[TutorController::class,'videoup']);
 

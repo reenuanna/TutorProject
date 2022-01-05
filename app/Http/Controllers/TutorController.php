@@ -71,8 +71,13 @@ class TutorController extends Controller
     public function tutorHome()
     {
         $id=session('tutorid');
-;
-        $data['result']=tutorModel::where('id',$id);
+        $data['result']=tutorModel::where('id',$id)->get();
         return view('Tutor.home',$data);
+    }
+    public function videoup()
+    {
+        $id=session('tutorid');
+        $data['result']=tutorModel::where('id',$id)->get();
+        return view('Tutor.videoupload',$data);
     }
 }
