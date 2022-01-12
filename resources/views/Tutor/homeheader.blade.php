@@ -49,6 +49,71 @@
                      </div>
                   </div>
                </div>
+               <div class="col-lg-9 site_information">
+                  <div class="full">
+                     <div class="main_menu">
+                        <nav class="navbar navbar-inverse navbar-toggleable-md">
+                           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cloapediamenu" aria-controls="cloapediamenu" aria-expanded="false" aria-label="Toggle navigation">
+                           <span class="float-left">Menu</span>
+                           <span class="float-right"><i class="fa fa-bars"></i> <i class="fa fa-close"></i></span>
+                           </button>
+                           <div class="collapse navbar-collapse justify-content-md-center" id="cloapediamenu">
+                            @if(session()->has('tutorid'))
+                             
+                              <ul class="navbar-nav">
+                                 <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link color-aqua-hover" href="/about">About</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link color-aqua-hover" href="coaching.html">Coaching</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link color-grey-hover" href="time.html">Time</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link color-grey-hover" href="contact.html">Contact Us</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link color-grey-hover" href="/logout">Logout</a>
+                                 </li>
+                              </ul>
+                              @else
+                              <!-- before login -->
+                               <ul class="navbar-nav">
+                                 <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link color-aqua-hover" href="/about">About</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link color-aqua-hover" href="coaching.html">Coaching</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link color-grey-hover" href="time.html">Time</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link color-grey-hover" href="contact.html">Contact Us</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link color-grey-hover" href="/login">Login</a>
+                                 </li>
+                              </ul>
+                              @endif
+                              <!-- -------------------------- -->
+                              <ul class="navbar-nav">
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="#"><img src="images/search_icon.png" alt="#" /></a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
             </div>
            </div>
         </div>

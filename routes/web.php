@@ -47,4 +47,6 @@ Route::get('tutorsignup',[TutorController::class,'tutorsignup']);
 Route::post('saveTutor',[TutorController::class,'saveTutor']);
 Route::get('tutor',[TutorController::class,'tutorHome']);
 Route::get('videoup',[TutorController::class,'videoup']);
+Route::post('uploadvideo',[TutorController::class,'uploadvideo']);
+Route::get('viewVideos',[TutorController::class,'viewVideos']);
 
